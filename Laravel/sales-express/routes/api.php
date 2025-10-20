@@ -9,7 +9,7 @@ use App\Http\Controllers\OpportunityStatusController;
 use App\Http\Controllers\OpportunityController;
 use App\Http\Controllers\LeadStatusController;
 use App\Http\Controllers\LeadController;
-
+use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\AccountController;
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
