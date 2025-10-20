@@ -15,6 +15,7 @@ import { Toaster } from 'sonner';
 import LogoutPage from './components/pages/LogoutPage.jsx';
 import OneLeadPage from './components/pages/OneLeadPage.jsx';
 import OneActivityPage from './components/pages/OneActivityPage.jsx';
+import OneOpportunityPage from "./components/pages/OneOpportunityPage.jsx";
 
 function App() {
    const [loggedIn,setLoggedIn] = useState(window.sessionStorage.getItem("LOGIN")==="1"); 
@@ -53,6 +54,7 @@ return (
       <Route path="lead/:lead_id" element={<OneLeadPage></OneLeadPage>}></Route>
       <Route path="activity/:activity_id" element={<OneActivityPage></OneActivityPage>}></Route>
       <Route path="opportunities" element={<OpportunitiesPage></OpportunitiesPage>}></Route>
+      <Route path="opportunity/:opportunity_id" element={<OneOpportunityPage></OneOpportunityPage>}></Route>
       <Route path="logout" element={<LogoutPage onLogout={updateLogin}></LogoutPage>}></Route>
     
 
