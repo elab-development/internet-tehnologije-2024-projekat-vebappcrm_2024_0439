@@ -5,6 +5,7 @@ import {useState} from "react";
 import HomePage from './components/pages/HomePage.jsx';
 import AccountsPage from './components/pages/AccountsPage.jsx';
 import ContactsPage from './components/pages/ContactsPage.jsx';
+import LeadsPage from './components/pages/LeadsPage.jsx';
 import { Toaster } from 'sonner';
 
 function App() {
@@ -34,6 +35,7 @@ return (
       <Route path="home" element={<HomePage></HomePage>}></Route>
       <Route path="accounts" element={<AccountsPage></AccountsPage>}></Route>
       <Route path="contacts" element={<ContactsPage></ContactsPage>}></Route>
+      <Route path="leads" element={<LeadsPage></LeadsPage>}></Route>
       
       </Routes> 
     </BrowserRouter> );
