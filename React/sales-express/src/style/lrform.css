@@ -1,0 +1,55 @@
+.formcontainer{
+    border:2px #e1e1e1 solid;
+    padding:10%;
+    width: 100%;
+    border-radius: 10px;
+    font-size: large;
+}
+
+.error{
+   color:red;
+}
+
+  /* Extra small devices (phones, <576px) */
+@media (max-width: 575.98px) {
+  .formcontainer{
+    flex-direction: column;
+
+  }
+
+}
+
+/* Small devices (sm, ≥576px and <768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .formcontainer{
+    flex-direction: column;
+
+  }
+
+
+}
+
+/* Medium devices (md, ≥768px and <992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .formcontainer{
+    flex-direction: column;
+
+  }
+
+
+}
+
+/* Large devices (lg, ≥992px and <1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .formcontainer{
+    flex-direction: column;
+
+  }
+}
+
+/* Extra large devices (xl, ≥1200px) */
+@media (min-width: 1200px) {
+
+}
+
+  
