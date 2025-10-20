@@ -19,6 +19,7 @@ import OneOpportunityPage from "./components/pages/OneOpportunityPage.jsx";
 import OneAccountPage from './components/pages/OneAccountPage.jsx';
 import OneContactPage from './components/pages/OneContactPage.jsx';
 import ProfilePage from './components/pages/ProfilePage.jsx';
+import CompanyInfoPage from './components/pages/CompanyInfoPage.jsx';
 
 function App() {
    const [loggedIn,setLoggedIn] = useState(window.sessionStorage.getItem("LOGIN")==="1"); 
@@ -61,6 +62,7 @@ return (
       <Route path="account/:account_id" element={<OneAccountPage></OneAccountPage>}></Route>
       <Route path="contact/:contact_id" element={<OneContactPage></OneContactPage>}></Route>
       <Route path="myprofile" element={<ProfilePage></ProfilePage>}></Route>
+      <Route path="mycompany" element={<CompanyInfoPage></CompanyInfoPage>}></Route>
       <Route path="logout" element={<LogoutPage onLogout={updateLogin}></LogoutPage>}></Route>
     
 
