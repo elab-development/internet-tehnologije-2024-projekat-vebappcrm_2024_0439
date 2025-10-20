@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {useState} from "react";
+import HomePage from './components/pages/HomePage.jsx';
 import { Toaster } from 'sonner';
 
 function App() {
@@ -16,14 +17,21 @@ function App() {
 return (
     <BrowserRouter className="App">
             <Toaster richColors></Toaster>
-    <Routes></Routes> 
+    <Routes>
+
+      
+      </Routes> 
     </BrowserRouter> );
   }
   else {
 return (
     <BrowserRouter className="App">
             <Toaster richColors></Toaster>
-    <Routes></Routes> 
+    <Routes>
+      <Route index element={<HomePage></HomePage>} />
+      <Route path="home" element={<HomePage></HomePage>}></Route>
+      
+      </Routes> 
     </BrowserRouter> );
   }
 }
