@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {useState} from "react";
 import HomePage from './components/pages/HomePage.jsx';
+import AccountsPage from './components/pages/AccountsPage.jsx';
 import { Toaster } from 'sonner';
 
 function App() {
@@ -30,6 +31,7 @@ return (
     <Routes>
       <Route index element={<HomePage></HomePage>} />
       <Route path="home" element={<HomePage></HomePage>}></Route>
+      <Route path="accounts" element={<AccountsPage></AccountsPage>}></Route>
       
       </Routes> 
     </BrowserRouter> );
