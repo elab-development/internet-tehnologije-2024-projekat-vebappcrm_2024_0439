@@ -22,8 +22,10 @@ import ProfilePage from './components/pages/ProfilePage.jsx';
 import CompanyInfoPage from './components/pages/CompanyInfoPage.jsx';
 import EmployeesPage from './components/pages/EmployeesPage.jsx';
 import SettingsPage from './components/pages/SettingsPage.jsx';
+import SupportPage from './components/pages/SupportPage.jsx';
 
-function App() {
+function App()
+ {
    const [loggedIn,setLoggedIn] = useState(window.sessionStorage.getItem("LOGIN")==="1"); 
   
   function updateLogin(state)
@@ -67,13 +69,15 @@ return (
       <Route path="mycompany" element={<CompanyInfoPage></CompanyInfoPage>}></Route>
       <Route path="employees" element={<EmployeesPage></EmployeesPage>}></Route>
       <Route path="settings" element={<SettingsPage></SettingsPage>}></Route>
+      <Route path="support" element={<SupportPage>  </SupportPage>}></Route>
       <Route path="logout" element={<LogoutPage onLogout={updateLogin}></LogoutPage>}></Route>
     
 
 
       
       </Routes> 
-    </BrowserRouter> );
+    </BrowserRouter>
+     );
   }
 }
 
