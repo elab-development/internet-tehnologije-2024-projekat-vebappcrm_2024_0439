@@ -7,6 +7,8 @@ import AccountsPage from './components/pages/AccountsPage.jsx';
 import ContactsPage from './components/pages/ContactsPage.jsx';
 import LeadsPage from './components/pages/LeadsPage.jsx';
 import OpportunitiesPage from './components/pages/OpportunitiesPage.jsx';
+import SessionLoginPage from './components/pages/SessionLoginPage.jsx';
+import SessionRegisterPage from './components/pages/SessionRegisterPage.jsx';
 import { Toaster } from 'sonner';
 
 function App() {
@@ -22,12 +24,16 @@ return (
     <BrowserRouter className="App">
             <Toaster richColors></Toaster>
     <Routes>
+      <Route index element={<SessionLoginPage onLogin={updateLogin}/>} />
+      <Route path="login" element={<SessionLoginPage onLogin={updateLogin}/>} />
+      <Route path="register/:companyid?" element={<SessionRegisterPage/>}></Route>
 
       
       </Routes> 
     </BrowserRouter> );
   }
-  else {
+  else 
+    {
 return (
     <BrowserRouter className="App">
             <Toaster richColors></Toaster>
@@ -41,7 +47,7 @@ return (
 
 
       
-      </Routes> 
+      </Routes> <Route path="opportunities" element={<OpportunitiesPage></OpportunitiesPage>}></Route>
     </BrowserRouter> );
   }
 }
