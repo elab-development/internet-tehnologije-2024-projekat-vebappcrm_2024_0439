@@ -11,7 +11,9 @@ use App\Http\Controllers\LeadStatusController;
 use App\Http\Controllers\LeadController;
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\ContactController;
 
+Route::get('/image/{filename}',[TestController::class,'get']);
 Route::group(['middleware' => ['auth:sanctum']], function () {
 
      Route::get('/user',[AuthController::class,'me']);
@@ -46,6 +48,30 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/mycompanyopportunities',[OpportunityController::class,'mycompanyopts']);
     Route::patch('/updateopportunity',[OpportunityController::class,'update']);
     Route::delete('/deleteopportunity/{opportunity_id}',[OpportunityController::class,'destroy']);
+
+    Route::post('/newaccount',[AccountController::class,'store']);
+    Route::post('/newcontact',[ContactController::class,'store']);
+    
+    Route::patch('/updateaccount',[AccountController::class,'update']);
+    Route::patch('/updatecontact',[ContactController::class,'update']);
+
+    Route::post('/searchaccountbyname',[AccountController::class,'searchaccountbyname']);
+    Route::post('/searchcontactbyname',[ContactController::class,'searchcontactbyname']);
+
+    Route::get('/mycompanyaccounts',[AccountController::class,'mycompanyaccounts']);
+    Route::get('/mycompanycontacts',[ContactController::class,'mycompanycontacts']);
+
+    Route::get('/account/{account_id}',[AccountController::class,'show']);
+    Route::get('/contact/{contact_id}',[ContactController::class,'show']);
+
+    Route::delete('/deleteaccount/{account_id}',[AccountController::class,'destroy']);
+    Route::delete('/deletecontact/{contact_id}',[ContactController::class,'destroy']);
+
+    Route::post('/newactivity',[ActivityController::class,'store']);
+    Route::get('/activity/{activity_id}',[ActivityController::class,'show']);
+    Route::patch('/updateactivity',[ActivityController::class,'update']);
+    Route::delete('/deleteactivity/{activity_id}',[ActivityController::class,'destroy']);
+    
 
     });
     
