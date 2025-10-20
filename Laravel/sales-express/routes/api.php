@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CompanyInfoController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\OpportunityStatusController;
+use App\Http\Controllers\OpportunityController;
 use App\Http\Controllers\LeadStatusController;
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
@@ -27,6 +28,8 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/updatecompany',[CompanyInfoController::class,'update']);
     Route::get('/sysroles',[RoleController::class,'getsysroles']);
     Route::get('/companyroles',[RoleController::class,'getcompanyroles']);
+     Route::get('/opportunitystatuses',[OpportunityStatusController::class,'index']);
+    Route::get('/leadstatuses',[LeadStatusController::class,'index']);
     });
     
 
