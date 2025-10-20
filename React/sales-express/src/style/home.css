@@ -1,0 +1,48 @@
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+  }
+
+  .centeredtxt{
+    text-align: center;
+  }
+
+  .largetext{
+    font-size: large;
+  }
+
+  .sidecol
+  {
+    border-right: 1px lightgrey solid;
+    height:110vh;
+  }
+.pagegrouphdg{
+    background-color: #f7f7f7;
+       font-weight: bold;
+  }
+
+.pagegroup{
+    background-color: #f7f7f7;
+  }
+.invis{
+  display:none;
+}
+
+.tableview{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+
+.tble{
+  background-color: white;
+}
+.tble thead{
+  background-color: #f4f2f3;
+}
+.tble td{
+  border-bottom:1px #f9f7f8 solid;
+}
