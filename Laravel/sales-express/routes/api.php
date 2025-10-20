@@ -8,6 +8,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\OpportunityStatusController;
 use App\Http\Controllers\OpportunityController;
 use App\Http\Controllers\LeadStatusController;
+use App\Http\Controllers\LeadController;
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
 
@@ -30,6 +31,20 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/companyroles',[RoleController::class,'getcompanyroles']);
      Route::get('/opportunitystatuses',[OpportunityStatusController::class,'index']);
     Route::get('/leadstatuses',[LeadStatusController::class,'index']);
+
+     Route::get('/lead/{lead_id}',[LeadController::class,'show']);
+    Route::post('/newlead',[LeadController::class,'store']);
+    Route::post('/convertlead',[OpportunityController::class,'convertlead']);
+    Route::patch('/updatelead',[LeadController::class,'update']);
+    Route::get('/mycompanyleads',[LeadController::class,'mycompanyleads']);
+    Route::delete('/deletelead/{lead_id}',[LeadController::class,'destroy']);
+
+
+    Route::get('/opportunity/{opportunity_id}',[OpportunityController::class,'show']);
+    Route::get('/mycompanyopportunities',[OpportunityController::class,'mycompanyopts']);
+    Route::patch('/updateopportunity',[OpportunityController::class,'update']);
+    Route::delete('/deleteopportunity/{opportunity_id}',[OpportunityController::class,'destroy']);
+
     });
     
 
