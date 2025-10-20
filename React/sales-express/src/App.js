@@ -12,6 +12,8 @@ import SessionRegisterPage from './components/pages/SessionRegisterPage.jsx';
 import ResetPasswordPage from './components/pages/ResetPasswordPage.jsx';
 import NewPasswordPage from './components/pages/NewPasswordPage.jsx';
 import { Toaster } from 'sonner';
+import LogoutPage from './components/pages/LogoutPage.jsx';
+import OneLeadPage from './components/pages/OneLeadPage.jsx';
 
 function App() {
    const [loggedIn,setLoggedIn] = useState(window.sessionStorage.getItem("LOGIN")==="1"); 
@@ -47,11 +49,13 @@ return (
       <Route path="accounts" element={<AccountsPage></AccountsPage>}></Route>
       <Route path="contacts" element={<ContactsPage></ContactsPage>}></Route>
       <Route path="leads" element={<LeadsPage></LeadsPage>}></Route>
+      <Route path="lead/:lead_id" element={<OneLeadPage></OneLeadPage>}></Route>
       <Route path="opportunities" element={<OpportunitiesPage></OpportunitiesPage>}></Route>
+      <Route path="logout" element={<LogoutPage onLogout={updateLogin}></LogoutPage>}></Route>
 
 
       
-      </Routes> <Route path="opportunities" element={<OpportunitiesPage></OpportunitiesPage>}></Route>
+      </Routes> 
     </BrowserRouter> );
   }
 }
