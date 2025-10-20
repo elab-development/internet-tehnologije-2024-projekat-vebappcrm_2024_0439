@@ -1,0 +1,161 @@
+
+:root{
+    --btn-bg: #c0c0c0;          
+    --btn-bg-dark: #a0a0a0;    
+    --btn-gloss: rgba(255,255,255,0.65);
+    --btn-gloss-2: rgba(255,255,255,0.18);
+    --btn-border: rgba(0,0,0,0.5);
+    --btn-text: #222222;       
+    --btn-radius: 10px;
+    --btn-padding: 0.6rem 1.2rem;
+    --btn-focus-shadow: 0 0 0 4px rgba(192,192,192,0.3);
+  }
+
+  .glossy-btn {
+    appearance: none;
+    display: inline-block;
+    font: 600 16px/1 "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--btn-text);
+    background:
+      linear-gradient(to bottom, #eeeeee, #d8d8d8 40%, var(--btn-bg-dark) 100%);
+    padding: var(--btn-padding);
+    border-radius: var(--btn-radius);
+    border: 1px solid var(--btn-border);
+    box-shadow: var(--btn-shadow), inset 0 1px 0 rgba(255,255,255,0.7);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 150ms ease, box-shadow 150ms ease, filter 150ms ease;
+  }
+
+  .glossy-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 55%;
+    background: linear-gradient(to bottom, var(--btn-gloss), transparent 70%);
+    transform: translateY(-4%);
+    pointer-events: none;
+  }
+
+  .glossy-btn:focus {
+    outline: none;
+    box-shadow: var(--btn-focus-shadow);
+  }
+
+  .glossy-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+.responsive-btn{
+    width:auto;
+}
+
+    /* --------------------
+       WINDOWS XP STYLE
+       -------------------- */
+    .btn-xp {
+      font-family: Tahoma, Verdana, sans-serif;
+      font-size: 13px;
+      padding: 4px 12px;
+      color: #000;
+      background: linear-gradient(to bottom, #f6f6f6 0%, #e3e3e3 100%);
+      border: 2px solid #7f9db9;
+      border-radius: 2px;
+      box-shadow:
+        inset 1px 1px 0 #fff,
+        inset -1px -1px 0 #d4d0c8;
+      cursor: default;
+    }
+
+    .btn-xp:hover {
+      background: linear-gradient(to bottom, #ffffff 0%, #eaeaea 100%);
+    }
+
+    .btn-xp:active {
+      background: linear-gradient(to bottom, #dcdcdc 0%, #f1f1f1 100%);
+      box-shadow:
+        inset 1px 1px 0 #d4d0c8,
+        inset -1px -1px 0 #ffffff;
+      border-color: #316ac5;
+    }
+
+    /* --------------------
+       WINDOWS 7 STYLE
+       -------------------- */
+    .btn-win7 {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      font-size: 13px;
+      padding: 2px 14px;
+      color: #000;
+      background: linear-gradient(to bottom, #fefefe 0%, #e7e7e7 100%);
+      border: 1px solid #a9a9a9;
+      border-radius: 4px;
+      box-shadow:
+        inset 0 1px 0 #ffffff,
+        0 1px 2px rgba(0, 0, 0, 0.15);
+      cursor: default;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .btn-ico{
+      font-size: 20pt !important;
+      margin:0px !important;
+      padding:0px!important;
+      vertical-align: middle !important;
+    }
+    .btn-ico>svg{
+      display: block;
+    }
+    .btn-win7:hover {
+      background: linear-gradient(to bottom, #ffffff 0%, #e9f1fb 100%);
+      border-color: #7aa1e6;
+    }
+
+    .btn-win7:active {
+      background: linear-gradient(to bottom, #dbe8fb 0%, #c2d6f0 100%);
+      border-color: #558de6;
+      box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+    }
+
+
+  /* Extra small devices (phones, <576px) */
+@media (max-width: 575.98px) {
+  .responsive-btn{
+    width:100% !important;
+  }
+
+}
+
+/* Small devices (sm, ≥576px and <768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+.responsive-btn{
+    width:100% !important;
+  }
+
+}
+
+/* Medium devices (md, ≥768px and <992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+.responsive-btn{
+    width:100% !important;
+  }
+
+}
+
+/* Large devices (lg, ≥992px and <1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+.responsive-btn{
+    width:100% !important;
+  }
+}
+
+/* Extra large devices (xl, ≥1200px) */
+@media (min-width: 1200px) {
+
+
+}

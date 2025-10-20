@@ -1,0 +1,67 @@
+.win-input {
+      padding: 4px 6px;
+      font-size: 14px;
+      font-family: Tahoma, Verdana, sans-serif;
+      border: 2px solid grey;
+      border-radius: 0px;
+      background-color: #fff;
+
+      box-shadow:
+        inset 1px 1px 0 #ffffff,
+        inset -1px -1px 0 #d4d0c8;
+    }
+
+.win-input:focus {
+      outline: none;
+}
+
+.win-label{
+    font-size: 14px;
+    font-family: Tahoma, Verdana, sans-serif;
+    color:black;
+}
+
+.win-input-error{
+    font-weight: bold;
+    color:firebrick;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.win-input-ctrlbg{
+    background-color: #ece9d8;
+}
+
+.win-input-greybg{
+background-color: #f7f7f7;
+}
+
+.win-input-hlorange{
+    border-top:2px solid orange;
+}
+
+.win-input-rb{
+    border-radius: 12px;
+}
+
+.win-input-margin{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right:25px;
+}
+
+.win-input-padding{
+    padding-top:2em;
+    padding-left:2em;
+    padding-bottom:2em;
+    padding-right: 2em;
+}
+
+.win-input-hdgpadding{
+    padding-top:0em !important;
+
+}
+
+.win-input-u{
+    text-decoration: underline !important;
+}

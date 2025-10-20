@@ -1,0 +1,50 @@
+  .sf-menu-strip
+  {
+    font-family: Arial, sans-serif;
+	  
+  }
+
+  /* Menu container */
+  .sf-menu {
+        font-family: Arial, sans-serif;
+    display: flex;
+    background: #dbe9f9; /* light blue background */
+    border-bottom: 3px solid #1b96bc; /* thick blue bottom border */
+    padding-left:2%;
+	  padding-right:2%;
+    margin:0;
+  }
+
+  /* Each tab */
+  .sf-menu li {
+    list-style: none;
+    margin: 0;
+  }
+
+  .sf-menu a {
+    display: block;
+    padding: 6px 10px;
+    text-decoration: none;
+    color: #0a2a66; /* navy blue text */
+    font-weight: bold;
+    margin-top: 1px;
+    margin-right: 2px;
+
+    transition: all 0.2s;
+  }
+
+  /* Hover effect */
+  .sf-menu a:hover {
+    background: linear-gradient(to bottom, #e8f2fe 0%, #aac8f0 100%);
+	/*color:#1b96bc;*/
+  }
+
+  /* Active (selected) tab */
+  .sf-menu a.active {
+	border-radius: 6px 6px 0 0;
+    background: linear-gradient(to bottom, #9ed3e4 0%, #1b96bc 100%);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+    color: white;
+    border-bottom: 3px solid #1b96bc; /* merges into bottom border */
+    margin-bottom: -3px; /* pull down to merge with border */
+  }
