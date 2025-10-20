@@ -4,8 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CompanyInfoController;
-
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\OpportunityStatusController;
 use App\Http\Controllers\LeadStatusController;
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
