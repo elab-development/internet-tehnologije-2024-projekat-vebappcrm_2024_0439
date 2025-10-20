@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {useState} from "react";
 import HomePage from './components/pages/HomePage.jsx';
 import AccountsPage from './components/pages/AccountsPage.jsx';
+import ContactsPage from './components/pages/ContactsPage.jsx';
 import { Toaster } from 'sonner';
 
 function App() {
@@ -32,6 +33,7 @@ return (
       <Route index element={<HomePage></HomePage>} />
       <Route path="home" element={<HomePage></HomePage>}></Route>
       <Route path="accounts" element={<AccountsPage></AccountsPage>}></Route>
+      <Route path="contacts" element={<ContactsPage></ContactsPage>}></Route>
       
       </Routes> 
     </BrowserRouter> );
