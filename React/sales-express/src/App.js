@@ -9,6 +9,8 @@ import LeadsPage from './components/pages/LeadsPage.jsx';
 import OpportunitiesPage from './components/pages/OpportunitiesPage.jsx';
 import SessionLoginPage from './components/pages/SessionLoginPage.jsx';
 import SessionRegisterPage from './components/pages/SessionRegisterPage.jsx';
+import ResetPasswordPage from './components/pages/ResetPasswordPage.jsx';
+import NewPasswordPage from './components/pages/NewPasswordPage.jsx';
 import { Toaster } from 'sonner';
 
 function App() {
@@ -27,6 +29,8 @@ return (
       <Route index element={<SessionLoginPage onLogin={updateLogin}/>} />
       <Route path="login" element={<SessionLoginPage onLogin={updateLogin}/>} />
       <Route path="register/:companyid?" element={<SessionRegisterPage/>}></Route>
+      <Route path="forgotpassword" element={<ResetPasswordPage></ResetPasswordPage>}></Route>
+      <Route path="newpassword" element={<NewPasswordPage></NewPasswordPage>}></Route>
 
       
       </Routes> 
