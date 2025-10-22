@@ -14,7 +14,10 @@ BACKEND:
 1. Pokrenuti XAMPP i omogućiti `Apache` i `MySQL`;
 2. Napraviti novu bazu podataka;
 3. Klonirati repozitorijum;
-4. Otvoriti ceo folder -> `cd .\Laravel\sales-express\ php artisan migrate` ;
+4. Otvoriti ceo folder -> `cd .\Laravel\sales-express\`
+
+ `php artisan migrate` ;
+ 
 5. Dodati fajl `php artisan serve`.
 
 FRONTEND:
