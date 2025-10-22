@@ -21,10 +21,8 @@ BACKEND:
 5. Dodati fajl `php artisan serve`.
 
 FRONTEND:
-1. Otvoriti folder (frontend);
-2. Instalirati zavisnosti;
-3. Pokrenuti React app.
-
+1. Instalirati zavisnosti `nmp install`;
+2. Pokrenuti React `nmp start`.
 
 Role i statusi:
 --
